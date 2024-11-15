@@ -9,7 +9,7 @@ set DEFAULT_BTRACE_HOME=
 if not exist "%BTRACE_HOME%\libs\btrace-client.jar" goto noBTraceHome
 
 if "%JAVA_HOME%" == "" goto noJavaHome
-  set JAVA_ARGS="-XX:+IgnoreUnrecognizedVMOptions"
+  set JAVA_ARGS=-XX:+IgnoreUnrecognizedVMOptions
   if exist "%JAVA_HOME%/jmods/" (
     set JAVA_ARGS="%JAVA_ARGS% -XX:+AllowRedefinitionToAddDeleteMethods"
     set JAVA_ARGS="%JAVA_ARGS% --add-exports jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED"
